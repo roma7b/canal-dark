@@ -1,0 +1,24 @@
+{
+  "mcpServers": {
+    "remotion-docs": {
+      "command": "npx",
+      "args": ["-y", "@remotion/mcp@latest"]
+    },
+    "elevenlabs": {
+      "command": "uvx",
+      "args": ["elevenlabs-mcp"],
+      "env": {
+        "ELEVENLABS_API_KEY": "your-key",
+        "ELEVENLABS_MCP_BASE_PATH": "./public"
+      }
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest"]
+    },
+    "figma": {
+      "type": "http",
+      "url": "https://mcp.figma.com/mcp"
+    }
+  }
+}

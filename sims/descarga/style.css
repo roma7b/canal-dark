@@ -1,0 +1,20 @@
+html, body { background: #081320; }
+#app { position: fixed; inset: 0; overflow: hidden;
+  background: radial-gradient(120% 70% at 50% 42%, #14304f 0%, #0b1a2c 55%, #060d17 100%); }
+#gl { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.ov { position: absolute; inset: 0; pointer-events: none; font-family: Inter, sans-serif; color: #fff; }
+.brand { position: absolute; left: 64px; top: 168px; display: flex; align-items: center; gap: 14px;
+  font: 800 30px Inter, sans-serif; letter-spacing: 0.16em; color: #eaf6ff; }
+.brand i { width: 22px; height: 22px; border-radius: 6px; border: 3px solid #5ee7ff; box-shadow: 0 0 18px #5ee7ff88; }
+.cap { position: absolute; left: 64px; right: 64px; top: 240px; min-height: 260px; }
+.cap div { position: absolute; left: 0; right: 0; top: 0; font: 800 68px/1.12 Inter, sans-serif; letter-spacing: -0.02em;
+  text-shadow: 0 4px 28px rgba(0,0,0,0.55); opacity: 0; }
+.cap b { color: #ffd23f; font-weight: 900; }
+.sub { position: absolute; left: 64px; top: 430px; padding: 22px 28px; border-radius: 22px; background: rgba(6,14,26,0.86); border: 2px solid rgba(94,231,255,0.35); text-align: left; font: 700 46px/1.2 Inter, sans-serif; opacity: 0; color: #eaf6ff; }
+.sub small { display: block; margin-top: 18px; font: 800 34px Inter, sans-serif; letter-spacing: 0.14em; color: #5ee7ff; }
+.lab { position: absolute; display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-radius: 14px;
+  background: rgba(6, 14, 26, 0.82); border: 2px solid rgba(255,255,255,0.18); white-space: nowrap; opacity: 0;
+  font: 800 34px Inter, sans-serif; transform: translate(-50%, -50%); }
+.lab i { width: 16px; height: 16px; border-radius: 50%; }
+.lab span { font: 700 26px Inter, sans-serif; color: rgba(255,255,255,0.75); }
+svg.lines { position: absolute; inset: 0; width: 100%; height: 100%; }

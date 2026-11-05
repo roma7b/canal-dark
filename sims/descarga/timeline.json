@@ -1,0 +1,29 @@
+{
+  "duration": 32,
+  "scanStart": 3.3,
+  "scanEnd": 5.9,
+  "press": 6.3,
+  "drainStart": 6.8,
+  "drainEnd": 9.4,
+  "gateClose": 9.4,
+  "refillStart": 10.0,
+  "refillEnd": 20.4,
+  "valveShut": 20.4,
+  "fail": 24.2,
+  "riseEnd": 26.1,
+  "overflowEnd": 28.6,
+  "outro": 28.6,
+  "scanBack": 29.8,
+  "scanBackEnd": 31.6,
+  "captions": [
+    [0.0, 3.2, "Por que a caixa da descarga <b>nunca transborda?</b>"],
+    [3.3, 6.2, "Olha <b>lá dentro.</b>"],
+    [6.3, 10.1, "Você aperta o botão: a <b>comporta</b> abre e a água desce pro vaso."],
+    [10.2, 14.3, "A <b>boia</b> desce junto com a água e <b>abre a entrada.</b>"],
+    [14.4, 20.3, "A água volta a encher e vai <b>empurrando a boia</b> pra cima."],
+    [20.4, 24.1, "Boia lá em cima: <b>entrada fechada.</b> A água para."],
+    [24.2, 26.2, "E se a boia <b>travar?</b>"],
+    [26.2, 28.5, "O <b>ladrão</b> leva o excesso direto pro vaso."],
+    [28.6, 32.0, "Por isso ela <b>nunca transborda.</b>"]
+  ]
+}
