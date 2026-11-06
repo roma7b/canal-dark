@@ -317,15 +317,15 @@ runSim(DEFAULTS, async ({canvas}) => {
   // --- camera keys: [t, [px, py, pz, tx, ty, tz]] ----------------------------
   const CAM = [
     [0, [3.0, 2.5, 6.9, 0, 1.6, -0.05]],
-    [3.2, [2.5, 2.5, 6.6, 0, 1.65, -0.1]],
-    [6.0, [1.3, 2.6, 4.9, 0, 2.3, -0.5]],
-    [14.0, [0.4, 2.65, 4.7, -0.05, 2.32, -0.5]],
-    [20.4, [-0.6, 2.75, 4.6, -0.15, 2.36, -0.5]],
-    [24.2, [-0.3, 2.85, 4.4, 0.05, 2.38, -0.5]],
-    [26.2, [1.0, 2.8, 4.4, 0.2, 2.3, -0.5]],
-    [28.6, [1.2, 2.75, 4.6, 0.15, 2.25, -0.5]],
-    [31.0, [2.9, 2.5, 6.8, 0, 1.6, -0.05]],
-    [32.0, [3.0, 2.5, 6.9, 0, 1.6, -0.05]],
+    [TL.scanStart, [2.5, 2.5, 6.6, 0, 1.65, -0.1]],
+    [TL.scanEnd + 0.4, [1.3, 2.6, 4.9, 0, 2.3, -0.5]],
+    [(TL.refillStart + TL.refillEnd) / 2, [0.4, 2.65, 4.7, -0.05, 2.32, -0.5]],
+    [TL.valveShut, [-0.6, 2.75, 4.6, -0.15, 2.36, -0.5]],
+    [TL.fail, [-0.3, 2.85, 4.4, 0.05, 2.38, -0.5]],
+    [TL.riseEnd, [1.0, 2.8, 4.4, 0.2, 2.3, -0.5]],
+    [TL.outro, [1.2, 2.75, 4.6, 0.15, 2.25, -0.5]],
+    [TL.scanBack + 0.6 * (TL.scanBackEnd - TL.scanBack), [2.9, 2.5, 6.8, 0, 1.6, -0.05]],
+    [TL.duration, [3.0, 2.5, 6.9, 0, 1.6, -0.05]],
   ];
 
   const render = (t) => {
@@ -428,7 +428,7 @@ runSim(DEFAULTS, async ({canvas}) => {
       el.style.opacity = k;
       el.style.transform = `translateY(${a === 0 ? 0 : (1 - smooth((t - a) / 0.35)) * 26}px)`;
     }
-    sub.style.opacity = smooth((t - TL.outro - 0.6) / 0.4) * (1 - smooth((t - TL.scanBackEnd + 0.1) / 0.3));
+    sub.style.opacity = 0;
 
     // labels
     showLabel(LAB.button, button.position, TL.press - 1.0, TL.press + 0.9, t);

@@ -11,7 +11,7 @@ e `README-claude-motion.md`).
 
 | # | Tema | Arquivos | Saída |
 |---|---|---|---|
-| 01 | Por que a caixa da descarga nunca transborda? | `sims/descarga/`, `sfx/cues/descarga.py` | `videos/teste01-descarga.mp4` |
+| 01 | Por que a caixa da descarga nunca transborda? | `sims/descarga/`, `sfx/cues/descarga.py` | `videos/teste01-descarga-narrado.mp4` (com voz), `videos/teste01-descarga.mp4` (sem voz) |
 
 ## Como gerar um vídeo
 
@@ -22,7 +22,9 @@ npm install
 node sims/build.mjs descarga
 python3 -m sfx sfx/cues/descarga.py
 node sims/capture.mjs descarga --size 1080x1920 --dpr 1 --fps 30 --crf 18 --out out/sims/descarga-silent.mp4
-ffmpeg -y -i out/sims/descarga-silent.mp4 -i out/sims/descarga.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 256k -movflags +faststart -shortest videos/teste01-descarga.mp4
+# voz (ElevenLabs) + efeitos abaixados quando a voz fala, masterizado em -14 LUFS
+ffmpeg -y -i sims/descarga/narracao.mp3 -i out/sims/descarga-sfx.wav -filter_complex "[0:a]aresample=48000,pan=stereo|c0=c0|c1=c0,highpass=f=80,acompressor=threshold=-20dB:ratio=3:attack=5:release=80,asplit=2[v][sc];[1:a]volume=-9dB[s];[s][sc]sidechaincompress=threshold=0.03:ratio=6:attack=20:release=300[sd];[v][sd]amix=inputs=2:normalize=0:duration=longest,apad=whole_dur=30.5,loudnorm=I=-14:TP=-1.5:LRA=11" -ar 48000 out/sims/descarga-mix.wav
+ffmpeg -y -i out/sims/descarga-silent.mp4 -i out/sims/descarga-mix.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 256k -movflags +faststart -shortest videos/teste01-descarga-narrado.mp4
 ```
 
 Frames de revisão (antes do render completo):
@@ -32,6 +34,13 @@ node sims/capture.mjs descarga --size 1080x1920 --dpr 1 --stills 0,8,17,27.5 --c
 ```
 
 Se o Chromium não for encontrado, defina `CHROMIUM=/caminho/do/chrome`.
+
+## Fluxo com narração
+
+1. Escrever o roteiro em `sims/<nome>/narracao.md` (uma frase por linha).
+2. Gerar a voz no ElevenLabs (um arquivo só) e salvar em `sims/<nome>/narracao.mp3`.
+3. Achar onde cada frase começa: `ffmpeg -i sims/<nome>/narracao.mp3 -af silencedetect=noise=-38dB:d=0.25 -f null -`
+4. Colocar esses tempos no `timeline.json` (cenas e legendas) e renderizar.
 
 ## Estrutura de um vídeo
 

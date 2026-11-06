@@ -8,7 +8,7 @@ import random
 from sfx.synth import SR, bandnoise, blip, chime, click, envelope, pad, pop, whoosh
 
 TIMELINE = "sims/descarga/timeline.json"
-OUT = "out/sims/descarga.wav"
+OUT = "out/sims/descarga-sfx.wav"
 TARGET_LUFS = -14.0
 
 # A minor-ish bed, light and curious

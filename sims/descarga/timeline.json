@@ -1,29 +1,71 @@
 {
-  "duration": 32,
-  "scanStart": 3.3,
-  "scanEnd": 5.9,
-  "press": 6.3,
-  "drainStart": 6.8,
-  "drainEnd": 9.4,
-  "gateClose": 9.4,
-  "refillStart": 10.0,
-  "refillEnd": 20.4,
-  "valveShut": 20.4,
-  "fail": 24.2,
-  "riseEnd": 26.1,
-  "overflowEnd": 28.6,
-  "outro": 28.6,
-  "scanBack": 29.8,
-  "scanBackEnd": 31.6,
+  "duration": 30.5,
+  "voice": "sims/descarga/narracao.mp3",
+  "scanStart": 2.75,
+  "scanEnd": 4.55,
+  "press": 5.5,
+  "drainStart": 6.0,
+  "drainEnd": 8.6,
+  "gateClose": 8.6,
+  "refillStart": 9.3,
+  "refillEnd": 17.7,
+  "valveShut": 17.7,
+  "fail": 19.71,
+  "riseEnd": 21.6,
+  "overflowEnd": 25.6,
+  "outro": 25.73,
+  "scanBack": 28.0,
+  "scanBackEnd": 30.0,
   "captions": [
-    [0.0, 3.2, "Por que a caixa da descarga <b>nunca transborda?</b>"],
-    [3.3, 6.2, "Olha <b>lá dentro.</b>"],
-    [6.3, 10.1, "Você aperta o botão: a <b>comporta</b> abre e a água desce pro vaso."],
-    [10.2, 14.3, "A <b>boia</b> desce junto com a água e <b>abre a entrada.</b>"],
-    [14.4, 20.3, "A água volta a encher e vai <b>empurrando a boia</b> pra cima."],
-    [20.4, 24.1, "Boia lá em cima: <b>entrada fechada.</b> A água para."],
-    [24.2, 26.2, "E se a boia <b>travar?</b>"],
-    [26.2, 28.5, "O <b>ladrão</b> leva o excesso direto pro vaso."],
-    [28.6, 32.0, "Por isso ela <b>nunca transborda.</b>"]
+    [
+      0.0,
+      2.8,
+      "Por que a caixa da descarga <b>nunca transborda?</b>"
+    ],
+    [
+      2.89,
+      4.6,
+      "Olha só o que tem <b>lá dentro.</b>"
+    ],
+    [
+      4.67,
+      8.8,
+      "Você aperta o botão: a <b>comporta</b> abre e a água desce pro vaso."
+    ],
+    [
+      8.84,
+      12.05,
+      "A <b>boia</b> desce junto com a água e <b>abre a entrada.</b>"
+    ],
+    [
+      12.12,
+      15.6,
+      "A água volta a encher e vai <b>empurrando a boia</b> pra cima."
+    ],
+    [
+      15.65,
+      19.6,
+      "Boia lá no alto: <b>entrada fechada.</b> A água para."
+    ],
+    [
+      19.71,
+      21.5,
+      "E se a boia <b>travar?</b>"
+    ],
+    [
+      21.59,
+      25.65,
+      "Aí entra o <b>ladrão:</b> ele leva o excesso direto pro vaso."
+    ],
+    [
+      25.73,
+      27.55,
+      "Por isso ela <b>nunca transborda.</b>"
+    ],
+    [
+      27.62,
+      30.5,
+      "Qual objeto eu abro <b>no próximo?</b>"
+    ]
   ]
 }
