@@ -1,0 +1,7 @@
+{
+  "duration": 7.0,
+  "accent": ["oitenta", "toneladas"],
+  "shots": [
+    {"img": "../tunel/frames/s1.png", "start": 0, "end": 7.0, "zoom": [1.0, 1.12], "focus": [0.5, 0.62], "shake": 0.004, "dust": 140, "flicker": 0.12}
+  ]
+}

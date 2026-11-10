@@ -1,0 +1,16 @@
+html, body { background: #05080c; }
+#app { position: fixed; inset: 0; overflow: hidden; }
+#gl { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.ov { position: absolute; inset: 0; pointer-events: none; font-family: Inter, sans-serif; color: #fff; }
+.gh { position: absolute; left: 48px; right: 48px; top: 150px; display: flex; gap: 14px; }
+.gh div { flex: 1; padding: 14px 18px 16px; border-radius: 14px; background: rgba(6, 12, 18, 0.72); border: 2px solid rgba(255, 255, 255, 0.14); }
+.gh small { display: block; font: 800 22px 'JetBrains Mono', monospace; letter-spacing: 0.14em; color: rgba(255, 255, 255, 0.55); }
+.gh b { display: block; margin-top: 6px; font: 800 40px 'JetBrains Mono', monospace; font-variant-numeric: tabular-nums; }
+.gh .money b { color: #7dff9a; }
+.gh .heat b { color: #ff5a3d; }
+.tag { position: absolute; left: 48px; top: 96px; font: 800 22px 'JetBrains Mono', monospace; letter-spacing: 0.14em; color: rgba(255, 255, 255, 0.55); }
+.tag b { color: #ffb347; }
+.fic { position: absolute; left: 0; right: 0; top: 300px; text-align: center; font: 700 24px Inter, sans-serif; letter-spacing: 0.1em; color: rgba(255, 255, 255, 0.6); }
+.cap { position: absolute; left: 60px; right: 60px; top: 1400px; text-align: center; font: 900 88px/1.05 Inter, sans-serif; letter-spacing: -0.02em;
+  color: #fff; -webkit-text-stroke: 18px #05080c; paint-order: stroke fill; text-transform: uppercase; }
+.cap i { font-style: normal; color: #ff5a3d; }
