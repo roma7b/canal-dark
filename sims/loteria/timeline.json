@@ -1,15 +1,19 @@
 {
-  "duration": 15.6,
-  "note": "PILOTO: tempos provisorios, sem narracao. Trocar pelos tempos reais das palavras quando o MP3 chegar.",
-  "accent": ["catorze", "todos", "trezentos", "compra", "lei"],
-  "lines": [
-    [0.0, 5.5, "Um homem ganhou na loteria catorze vezes. Sem sorte nenhuma. E sem quebrar nenhuma lei."],
-    [5.7, 13.5, "Pensa numa rifa com cem números, a um real cada. Se o prêmio for trezentos reais, o que você faz? Compra todos os números."],
-    [13.7, 15.5, "Peraí... comprar todos?"]
-  ],
+  "duration": 69.4,
+  "voice": "sims/loteria/narracao-fit.wav",
+  "words": "sims/loteria/narracao-fit-words.json",
+  "accent": ["catorze", "lei", "conta", "todos", "compra", "doze", "regras", "milhoes", "faltaram", "deles", "comprou"],
   "shots": [
-    {"id": "palco", "start": 0.0, "end": 5.6},
-    {"id": "rifa", "start": 5.6, "end": 13.6},
-    {"id": "perai", "start": 13.6, "end": 15.6}
+    {"id": "palco", "line": 0},
+    {"id": "lousa", "line": 1},
+    {"id": "rifa", "line": 2},
+    {"id": "perai", "line": 3},
+    {"id": "balanca", "line": 4},
+    {"id": "australia", "line": 5},
+    {"id": "virginia", "line": 6},
+    {"id": "corrida", "line": 7},
+    {"id": "sorteio", "line": 8, "fromPrevEnd": 0.15},
+    {"id": "investigacao", "line": 9},
+    {"id": "final", "line": 10}
   ]
 }

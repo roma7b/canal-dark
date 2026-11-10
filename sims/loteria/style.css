@@ -8,3 +8,6 @@ html, body { background: #101018; }
 .capw { position: absolute; left: 0; right: 0; top: 1290px; text-align: center; font: 900 104px/1 Inter, sans-serif; letter-spacing: -0.02em;
   color: #fff; -webkit-text-stroke: 22px #1d1b2e; paint-order: stroke fill; text-transform: lowercase; transform-origin: 50% 50%; }
 .capw.hot { color: #ffd23f; }
+.tag { position: absolute; left: 56px; top: 230px; padding: 16px 26px; border-radius: 18px; background: #ffd23f; border: 6px solid #1d1b2e;
+  font: 900 52px/1 Inter, sans-serif; color: #1d1b2e; opacity: 0; box-shadow: 8px 8px 0 #1d1b2e; }
+.tag small { display: block; margin-top: 8px; font: 700 32px Inter, sans-serif; }

@@ -11,6 +11,7 @@ e `README-claude-motion.md`).
 
 | # | Tema | Arquivos | Saída |
 |---|---|---|---|
+| 02 | O homem que ganhou na loteria 14 vezes (estilo novo: personagem 2D em mundo 3D) | `sims/loteria/`, `sfx/cues/loteria.py` | `videos/loteria-final.mp4` |
 | 01 | Por que a caixa da descarga nunca transborda? | `sims/descarga/`, `sfx/cues/descarga.py` | `videos/teste01-descarga-narrado.mp4` (com voz), `videos/teste01-descarga.mp4` (sem voz) |
 
 ## Como gerar um vídeo
@@ -34,6 +35,13 @@ node sims/capture.mjs descarga --size 1080x1920 --dpr 1 --stills 0,8,17,27.5 --c
 ```
 
 Se o Chromium não for encontrado, defina `CHROMIUM=/caminho/do/chrome`.
+
+## Fluxo com narração pela API (vídeo 02 em diante)
+
+1. Roteiro em `sims/<nome>/narracao.md` (bloco ``` com uma frase por linha).
+2. `python3 scripts/tts.py sims/<nome>`: gera `narracao.mp3` e o tempo de cada palavra (`narracao-words.json`).
+3. `python3 scripts/voice_fit.py sims/<nome> --speed 1.12 --pause 8=0.8`: acelera sem mudar o tom e abre pausas.
+4. As cenas e legendas leem `narracao-fit-words.json`, então mudar a voz re-cronometra o vídeo inteiro.
 
 ## Fluxo com narração
 

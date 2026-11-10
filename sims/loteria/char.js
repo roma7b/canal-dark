@@ -84,6 +84,36 @@ export function createChar(THREE, lookName) {
       c.stroke();
       c.restore();
     }
+    if (prop === 'bag') {
+      blob(Hn[0], Hn[1] + 58, 52, 50, '#e9b949');
+      c.fillStyle = '#e9b949';
+      c.strokeStyle = INK;
+      c.lineWidth = 7;
+      c.beginPath();
+      c.moveTo(Hn[0] - 18, Hn[1] + 12);
+      c.lineTo(Hn[0] + 18, Hn[1] + 12);
+      c.lineTo(Hn[0] + 10, Hn[1] - 4);
+      c.lineTo(Hn[0] - 10, Hn[1] - 4);
+      c.closePath();
+      c.fill();
+      c.stroke();
+      c.font = '900 52px Inter';
+      c.textAlign = 'center';
+      c.textBaseline = 'middle';
+      c.fillStyle = '#2f7d32';
+      c.fillText('$', Hn[0], Hn[1] + 62);
+    }
+    if (prop === 'stack') {
+      for (let i = 0; i < 5; i++) {
+        c.fillStyle = i % 2 ? '#fff3b0' : '#ffe58a';
+        c.strokeStyle = INK;
+        c.lineWidth = 5;
+        c.beginPath();
+        c.roundRect(Hn[0] - 46 + (i % 2) * 6, Hn[1] - 30 - i * 16, 92, 20, 4);
+        c.fill();
+        c.stroke();
+      }
+    }
     blob(Hn[0], Hn[1], 21, 21, L.skin);
   };
 
@@ -235,8 +265,9 @@ export function createChar(THREE, lookName) {
 
     // legs
     const st = s.stance ?? 0;
+    const sw = s.walk != null ? Math.sin(s.walk) : 0;
     for (const sd of [-1, 1]) {
-      const foot = [CX + sd * (44 + st), 722];
+      const foot = [CX + sd * (44 + st) + sw * sd * 10, 722 - Math.max(0, sd * sw) * 46];
       limb([[CX + sd * 36, 560], foot], L.pants, 28);
       blob(foot[0] + sd * 10, foot[1] + 8, 32, 15, L.shoe, 8);
     }
