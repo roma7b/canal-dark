@@ -14,3 +14,19 @@ html, body { background: #05080c; }
 .cap { position: absolute; left: 60px; right: 60px; top: 1400px; text-align: center; font: 900 88px/1.05 Inter, sans-serif; letter-spacing: -0.02em;
   color: #fff; -webkit-text-stroke: 18px #05080c; paint-order: stroke fill; text-transform: uppercase; }
 .cap i { font-style: normal; color: #ff5a3d; }
+.chip { position: absolute; left: 60px; top: 360px; padding: 14px 22px; border-radius: 12px; background: rgba(6, 12, 18, 0.82); border: 2px solid #ffb347;
+  font: 800 34px 'JetBrains Mono', monospace; color: #ffb347; letter-spacing: 0.06em; opacity: 0; }
+.chip.red { border-color: #ff5a3d; color: #ff5a3d; }
+.chip.green { border-color: #7dff9a; color: #7dff9a; }
+.flash b { animation: none; }
+.choice { position: absolute; left: 40px; right: 40px; padding: 20px 26px; border-radius: 18px; background: rgba(6, 12, 18, 0.86); border: 3px solid rgba(255,255,255,0.25); opacity: 0; }
+.choice h3 { margin: 0; font: 900 64px Inter, sans-serif; color: #fff; }
+.choice h3 span { display: inline-block; width: 74px; height: 74px; margin-right: 18px; border-radius: 14px; text-align: center; line-height: 74px; background: #ffb347; color: #05080c; }
+.choice p { margin: 8px 0 0; font: 700 32px/1.25 Inter, sans-serif; color: rgba(255,255,255,0.8); }
+.choice.b h3 span { background: #ff5a3d; }
+.end { position: absolute; left: 60px; right: 60px; top: 620px; text-align: center; opacity: 0; }
+.end h2 { margin: 0; font: 900 150px/1 Inter, sans-serif; color: #fff; }
+.end h2 i { font-style: normal; color: #ffb347; }
+.end h2 i.b { color: #ff5a3d; }
+.end p { margin: 30px 0 0; font: 800 46px Inter, sans-serif; color: #fff; }
+.end small { display: block; margin-top: 70px; font: 600 30px/1.35 Inter, sans-serif; color: rgba(255,255,255,0.6); }

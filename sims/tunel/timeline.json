@@ -1,7 +1,17 @@
 {
-  "duration": 7.0,
-  "accent": ["oitenta", "toneladas"],
+  "duration": 79.0,
+  "accent": ["oitenta", "toneladas", "grama", "cofre", "segunda", "problema", "grama", "milhoes", "usadas", "rastrear", "bira", "voltou", "caixa", "policia", "escolhe", "espera", "agora", "estrada", "voce"],
   "shots": [
-    {"img": "../tunel/frames/s1.png", "start": 0, "end": 7.0, "zoom": [1.0, 1.12], "focus": [0.5, 0.62], "shake": 0.004, "dust": 140, "flicker": 0.12}
+    {"id": "tunel", "line": 0, "img": "s1", "zoom": [1.0, 1.12], "focus": [0.5, 0.55]},
+    {"id": "fachada", "line": 1, "img": "s2", "zoom": [1.12, 1.0], "focus": [0.5, 0.6]},
+    {"id": "mapa", "line": 2},
+    {"id": "cofre", "line": 3, "img": "s4", "zoom": [1.0, 1.1], "focus": [0.5, 0.45]},
+    {"id": "peso", "line": 4},
+    {"id": "notas", "line": 6, "img": "s6", "zoom": [1.0, 1.15], "focus": [0.5, 0.5]},
+    {"id": "garagem", "line": 7, "img": "s7", "zoom": [1.05, 1.15], "focus": [0.4, 0.6]},
+    {"id": "janela", "line": 8, "img": "s8", "zoom": [1.0, 1.18], "focus": [0.45, 0.45]},
+    {"id": "radio", "line": 10, "img": "s9", "zoom": [1.0, 1.14], "focus": [0.5, 0.62]},
+    {"id": "escolha", "line": 11},
+    {"id": "fim", "line": 14}
   ]
 }
