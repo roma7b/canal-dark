@@ -59,7 +59,9 @@ const scanY = (t) => {
   return lerp(-0.1, 3.1, prog(t, TL.scanBack, TL.scanBackEnd, easeInOutCubic));
 };
 
-runSim(DEFAULTS, async ({canvas}) => {
+runSim(DEFAULTS, async ({canvas, cfg}) => {
+  // cfg.clean hides captions/labels and cfg.camAt freezes the camera: reference stills for image models
+  const clean = !!cfg.clean;
   const renderer = new THREE.WebGLRenderer({canvas, antialias: true, alpha: true, preserveDrawingBuffer: true});
   renderer.setClearColor(0x000000, 0);
   renderer.localClippingEnabled = true;
@@ -257,6 +259,7 @@ runSim(DEFAULTS, async ({canvas}) => {
   ov.innerHTML = `<svg class="lines"></svg><div class="brand"><i></i>LÁ DENTRO</div><div class="cap"></div>
     <div class="sub">Qual objeto eu abro no próximo?<small>@LADENTRO</small></div>`;
   app.appendChild(ov);
+  if (clean) ov.style.display = 'none';
   const capBox = ov.querySelector('.cap');
   const caps = TL.captions.map(([a, b, html]) => {
     const el = document.createElement('div');
@@ -330,7 +333,7 @@ runSim(DEFAULTS, async ({canvas}) => {
 
   const render = (t) => {
     // camera
-    const c = keyed(CAM, t);
+    const c = keyed(CAM, cfg.camAt ?? t);
     camera.position.set(c[0], c[1], c[2]);
     camera.lookAt(c[3], c[4], c[5]);
 
@@ -395,7 +398,7 @@ runSim(DEFAULTS, async ({canvas}) => {
     const aOut = 1 - prog(t, TL.press + 0.3, TL.press + 0.7);
     arrow.position.set(GATE_X, TANK.y1 + 0.55 - 0.32 * ak, TANK.z);
     arrow.material.opacity = (t > TL.press - 1 ? 1 : 0) * aOut;
-    arrow.visible = arrow.material.opacity > 0.01;
+    arrow.visible = !clean && arrow.material.opacity > 0.01;
 
     // drops: fill stream from the nozzle down to the surface
     const fillTop = V(PIVOT.x - 0.1, PIVOT.y - 0.14, TANK.z);
