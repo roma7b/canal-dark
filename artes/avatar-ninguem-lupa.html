@@ -1,0 +1,28 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+html,body{margin:0;width:1080px;height:1080px;overflow:hidden;background:#ffd23f}
+svg{display:block}
+text{font-family:Inter,sans-serif;font-weight:900}
+</style></head><body>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="lens"><circle cx="460" cy="470" r="236"/></clipPath>
+  </defs>
+  <rect width="1080" height="1080" fill="#ffd23f"/>
+  <!-- hard sticker shadow -->
+  <g transform="translate(26,26)" fill="#d9a800" stroke="#d9a800" stroke-linecap="round">
+    <line x1="636" y1="646" x2="860" y2="870" stroke-width="130"/>
+    <circle cx="460" cy="470" r="262" stroke-width="0"/>
+  </g>
+  <!-- handle -->
+  <line x1="636" y1="646" x2="860" y2="870" stroke="#1d1b2e" stroke-width="130" stroke-linecap="round"/>
+  <line x1="690" y1="700" x2="720" y2="730" stroke="#ffd23f" stroke-width="40" stroke-linecap="butt"/>
+  <line x1="660" y1="670" x2="690" y2="700" stroke="#1d1b2e" stroke-width="130" stroke-linecap="butt" opacity="0"/>
+  <!-- lens -->
+  <circle cx="460" cy="470" r="262" fill="#1d1b2e"/>
+  <circle cx="460" cy="470" r="236" fill="#bfe8ff"/>
+  <g clip-path="url(#lens)">
+    <path d="M200 300 Q330 220 520 250 L520 420 Q380 360 200 440 Z" fill="#ffffff" opacity="0.55"/>
+  </g>
+  <text x="460" y="548" font-size="400" text-anchor="middle" fill="#1d1b2e">?</text>
+</svg>
+</body></html>
