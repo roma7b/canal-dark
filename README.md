@@ -11,6 +11,7 @@ e `README-claude-motion.md`).
 
 | # | Tema | Arquivos | Saída |
 |---|---|---|---|
+| 03 | Você Decide: O Túnel, ep. 1 (imagens Higgsfield animadas em código, ~13 créditos) | `sims/tunel/`, `sfx/cues/tunel.py` | `videos/tunel-ep1.mp4` |
 | 02 | O homem que ganhou na loteria 14 vezes (estilo novo: personagem 2D em mundo 3D) | `sims/loteria/`, `sfx/cues/loteria.py` | `videos/loteria-final.mp4` |
 | 01 | Por que a caixa da descarga nunca transborda? | `sims/descarga/`, `sfx/cues/descarga.py` | `videos/teste01-descarga-narrado.mp4` (com voz), `videos/teste01-descarga.mp4` (sem voz) |
 
