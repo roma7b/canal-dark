@@ -65,7 +65,7 @@ runSim(DEFAULTS, async ({canvas}) => {
   const app = document.getElementById('app');
   const ov = document.createElement('div');
   ov.className = 'ov';
-  ov.innerHTML = `<div class="tag">VOCÊ DECIDE · <b>O TÚNEL</b> · EP 1</div>
+  ov.innerHTML = `<div class="tag">DOIS CAMINHOS · <b>O TÚNEL</b> · PARTE 1</div>
     <div class="gh"><div class="money"><small>BOLADA</small><b>R$ 0</b></div><div class="crew"><small>EQUIPE</small><b>4</b></div><div class="heat"><small>CALOR</small><b>0%</b></div></div>
     <div class="fic">FICÇÃO INSPIRADA EM FATOS REAIS</div>
     <div class="chip" id="c-local">FORTALEZA · 2005</div>
@@ -77,7 +77,7 @@ runSim(DEFAULTS, async ({canvas}) => {
     <div class="chip red" id="c-dom">DOM 03:00</div>
     <div class="choice a" id="ch-a"><h3><span>A</span>FICAR</h3><p>Se o Bira ficar calado, o resto está seguro.<br>Se ele falar, a polícia chega antes do sol.</p></div>
     <div class="choice b" id="ch-b"><h3><span>B</span>FUGIR</h3><p>Caminhão de grama, com o que couber.<br>Pela mesma estrada onde pararam o Bira.</p></div>
-    <div class="end"><h2><i>A</i> ou <i class="b">B</i>?</h2><p>Comenta aí embaixo.</p><small>A parte 2 segue a escolha da maioria.<br>No caso real, a maior parte do bando foi presa.</small></div>
+    <div class="end"><h2><i>A</i> ou <i class="b">B</i>?</h2><p>Comenta aí embaixo.</p><small>A parte 2 segue a escolha da maioria.<br>Segue <b>@doiscaminhos.br</b> pra não perder.<br>No caso real, a maior parte do bando foi presa.</small></div>
     <div class="cap"></div>`;
   app.appendChild(ov);
   const $ = (s) => ov.querySelector(s);
