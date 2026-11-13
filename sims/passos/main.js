@@ -97,6 +97,8 @@ runSim(DEFAULTS, async ({canvas, cfg}) => {
     }
   };
   const txt = (s, x, y, size, col, weight = 900, align = 'center', stroke = null) => {
+    // all on-screen copy in caps, except handles and site addresses
+    if (!/[@.\/]/.test(s)) s = s.toUpperCase();
     ctx.font = `${weight} ${size}px Inter`;
     ctx.textAlign = align;
     ctx.textBaseline = 'middle';
@@ -110,6 +112,7 @@ runSim(DEFAULTS, async ({canvas, cfg}) => {
     ctx.fillText(s, x, y);
   };
   const fitTxt = (s, x, y, size, maxW, col, weight = 900, stroke = null) => {
+    if (!/[@.\/]/.test(s)) s = s.toUpperCase();
     ctx.font = `${weight} ${size}px Inter`;
     const k = Math.min(1, maxW / ctx.measureText(s).width);
     txt(s, x, y, Math.floor(size * k), col, weight, 'center', stroke);
@@ -778,14 +781,14 @@ runSim(DEFAULTS, async ({canvas, cfg}) => {
       P(t, W(15, 'salva'), 540, 1290, () => {
         ctx.fillStyle = '#fff';
         ctx.beginPath();
-        ctx.moveTo(250, 1240);
-        ctx.lineTo(310, 1240);
-        ctx.lineTo(310, 1340);
-        ctx.lineTo(280, 1315);
-        ctx.lineTo(250, 1340);
+        ctx.moveTo(230, 1240);
+        ctx.lineTo(290, 1240);
+        ctx.lineTo(290, 1340);
+        ctx.lineTo(260, 1315);
+        ctx.lineTo(230, 1340);
         ctx.closePath();
         ctx.fill();
-        txt('salva e comenta', 590, 1290, 60, '#fff', 800);
+        txt('salva e comenta', 600, 1292, 52, '#fff', 800);
       });
       txt('@vaibemviagens · @lucasmontemorr', 540, 1430, 46, B.lav, 800);
     },

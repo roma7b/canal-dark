@@ -60,6 +60,7 @@ e a **faixa de baixo** com a legenda e o @ (y > ≈1520).
 - Cenas desenhadas em 1080 de largura, mas reduzidas a 0,8 e deslocadas 40 px para a esquerda:
   a faixa y 450..1460 da cena vai para y ≈500..1310 da tela (ver `render` em `sims/passos/main.js`).
 - Legenda grande em `top: 1300px`, `right: 140px`.
+- Todo texto na tela em MAIÚSCULAS (título, selo, legenda, rótulos das cenas); só @ e endereços de site ficam em minúsculas.
 - Modelo atualizado: `sims/passos/` (`style.css` + `render`). `sims/portugal/` ainda está no layout antigo.
 - Na revisão, sobrepor a área amarela num quadro de cada cena e conferir que nada importante fica embaixo dela.
 
