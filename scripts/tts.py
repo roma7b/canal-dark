@@ -18,7 +18,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-VOICE = os.environ.get("ELEVEN_VOICE", "4XmhZ74tBbUVCXIYNMMo")  # default: Leonardo (pt-BR). Vai Bem uses Roberta: ohZOfA9iwlZ5nOsoY7LB
+VOICE = os.environ.get("ELEVEN_VOICE", "4XmhZ74tBbUVCXIYNMMo")  # default: Leonardo (pt-BR). Vai Bem uses Jenifer: GOkMqfyKMLVUcYfO2WbB (stability 0.5, style 0.15)
 MODEL = "eleven_multilingual_v2"
 SETTINGS = {
     "stability": float(os.environ.get("ELEVEN_STABILITY", 0.45)),
