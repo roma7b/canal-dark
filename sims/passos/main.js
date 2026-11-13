@@ -64,7 +64,7 @@ runSim(DEFAULTS, async ({canvas, cfg}) => {
   const app = document.getElementById('app');
   const ov = document.createElement('div');
   ov.className = 'ov';
-  ov.innerHTML = '<div class="tt"><b>como ir pra portugal</b><i>em 4 passos</i></div><div class="chip">regras de nov/2026</div><div class="cpt"></div>';
+  ov.innerHTML = '<div class="tt"><b>como ir pra portugal</b><i>em 4 passos</i><div class="chip">regras de nov/2026</div></div><div class="cpt"></div>';
   app.appendChild(ov);
   const cap = ov.querySelector('.cpt'), title = ov.querySelector('.tt'), chip = ov.querySelector('.chip');
 
@@ -243,7 +243,7 @@ runSim(DEFAULTS, async ({canvas, cfg}) => {
     ctx.fillStyle = '#c8ccdf';
     ctx.fillRect(-400, y, S + 800, 30);
     ctx.fillStyle = '#4a5168';
-    ctx.fillRect(-400, y + 30, S + 800, 600);
+    ctx.fillRect(-400, y + 30, S + 800, 1400);
     ctx.fillStyle = '#fff';
     for (let x = 30; x < S; x += 170) ctx.fillRect(x, y + 140, 90, 16);
   };
@@ -807,9 +807,11 @@ runSim(DEFAULTS, async ({canvas, cfg}) => {
       ctx.scale(z * 0.72, z * 0.72);
       ctx.translate(-S / 2, -900);
     } else {
-      ctx.translate(S / 2 + dx, 960);
-      ctx.scale(z, z);
-      ctx.translate(-S / 2, -960);
+      // TikTok/Reels safe area: scene band y 450..1460 shrinks into y 501..1309,
+      // shifted left of the right-hand icon column
+      ctx.translate(S / 2 - 40 + dx, 905);
+      ctx.scale(z * 0.8, z * 0.8);
+      ctx.translate(-S / 2, -955);
     }
     SHOT[sh.id](t, sh);
     ctx.restore();

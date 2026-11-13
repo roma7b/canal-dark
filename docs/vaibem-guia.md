@@ -39,7 +39,7 @@ Quem aprova o conteúdo é a **Brena** (Vai Bem). Primeiro vídeo: `sims/portuga
 
 ## Estilo visual (motion graphics 2D em canvas, sem custo de créditos)
 
-- Código: `sims/portugal/main.js` é o modelo. Copiar a pasta para um tema novo e trocar as cenas.
+- Código: `sims/passos/main.js` é o modelo (já no layout da área livre do TikTok). Copiar a pasta para um tema novo e trocar as cenas.
 - **Cenas rápidas**: um corte a cada 2-3 s, com flash branco e leve zoom de entrada. A lista de cenas fica em
   `timeline.json` como `[id, linha, palavra-que-dispara]`; tudo sincroniza pela narração.
 - Cada elemento entra na palavra que o nomeia (carimbos "ACABOU", "APROVADO", X vermelho, checks verdes).
@@ -49,6 +49,19 @@ Quem aprova o conteúdo é a **Brena** (Vai Bem). Primeiro vídeo: `sims/portuga
 - Legenda grande de 1-2 palavras, com palavras-chave em vermelho (lista `accent` no `timeline.json`).
 - Final: logo Vai Bem, pergunta do CTA, "salva e comenta", @lucasmontemorr.
 - Logo atual: `sims/portugal/logo-vaibem-branco.png` (recorte do rodapé das cotações, baixa resolução — pedir PNG/SVG em alta).
+
+## Área livre do TikTok e do Reels (obrigatório)
+
+Os vídeos também vão para o TikTok. Nada importante pode ficar onde a interface do app cobre
+(em 1080x1920): o **topo até y≈290**, a **coluna da direita** com os ícones (x > ≈935, de y≈380 a 1530)
+e a **faixa de baixo** com a legenda e o @ (y > ≈1520).
+
+- Título fixo em `top: 290px`, compacto (44 px), com o selo "regras de <mês>/<ano>" **dentro** da faixa do título.
+- Cenas desenhadas em 1080 de largura, mas reduzidas a 0,8 e deslocadas 40 px para a esquerda:
+  a faixa y 450..1460 da cena vai para y ≈500..1310 da tela (ver `render` em `sims/passos/main.js`).
+- Legenda grande em `top: 1300px`, `right: 140px`.
+- Modelo atualizado: `sims/passos/` (`style.css` + `render`). `sims/portugal/` ainda está no layout antigo.
+- Na revisão, sobrepor a área amarela num quadro de cada cena e conferir que nada importante fica embaixo dela.
 
 ## Dois formatos de saída
 
