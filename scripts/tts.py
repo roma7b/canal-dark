@@ -57,21 +57,51 @@ def words_from_alignment(text, al):
     return out
 
 
-def main():
-    d = Path(sys.argv[1])
-    text = read_text(d / "narracao.md")
-    body = json.dumps({"text": text, "model_id": MODEL, "voice_settings": SETTINGS, "language_code": "pt"})
+SR = 44100
+GAP = 0.22  # silence between lines, seconds
+
+
+def call(payload, fmt):
     cmd = ["curl", "-sS", "-m", "180", "-X", "POST",
-           f"https://api.elevenlabs.io/v1/text-to-speech/{VOICE}/with-timestamps?output_format=mp3_44100_128",
+           f"https://api.elevenlabs.io/v1/text-to-speech/{VOICE}/with-timestamps?output_format={fmt}",
            "-H", "Content-Type: application/json", "--data-binary", "@-"]
     if os.environ.get("ELEVEN_API_KEY"):
         cmd[4:4] = ["-H", f"xi-api-key: {os.environ['ELEVEN_API_KEY']}"]
-    res = subprocess.run(cmd, input=body.encode(), capture_output=True, check=True)
+    res = subprocess.run(cmd, input=json.dumps(payload).encode(), capture_output=True, check=True)
     data = json.loads(res.stdout)
     if "audio_base64" not in data:
         sys.exit(f"API error: {json.dumps(data)[:400]}")
-    (d / "narracao.mp3").write_bytes(base64.b64decode(data["audio_base64"]))
-    words = words_from_alignment(text, data["alignment"])
+    return data
+
+
+def main():
+    d = Path(sys.argv[1])
+    text = read_text(d / "narracao.md")
+    lines = text.split("\n")
+    # One request per line, with the neighbouring lines as context: long single
+    # generations drift and turn robotic towards the end; short ones stay natural.
+    pcm, words = bytearray(), []
+    for i, line in enumerate(lines):
+        payload = {"text": line, "model_id": MODEL, "voice_settings": SETTINGS, "language_code": "pt", "seed": 7}
+        if i > 0:
+            payload["previous_text"] = lines[i - 1]
+        if i + 1 < len(lines):
+            payload["next_text"] = lines[i + 1]
+        data = call(payload, "mp3_44100_128")
+        off = len(pcm) / 2 / SR
+        for w in words_from_alignment(line, data["alignment"]):
+            words.append({**w, "a": round(w["a"] + off, 3), "b": round(w["b"] + off, 3), "line": i})
+        dec = subprocess.run(["ffmpeg", "-loglevel", "error", "-f", "mp3", "-i", "pipe:0", "-f", "s16le", "-ar", str(SR), "-ac", "1", "pipe:1"],
+                             input=base64.b64decode(data["audio_base64"]), capture_output=True, check=True)
+        pcm += dec.stdout
+        if i + 1 < len(lines):
+            pcm += bytes(int(GAP * SR) * 2)
+        print(f"  line {i}: {len(line)} chars")
+    raw = d / "narracao.pcm"
+    raw.write_bytes(pcm)
+    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-f", "s16le", "-ar", str(SR), "-ac", "1", "-i", str(raw),
+                    "-b:a", "192k", str(d / "narracao.mp3")], check=True)
+    raw.unlink()
     (d / "narracao-words.json").write_text(json.dumps(words, ensure_ascii=False, indent=0), encoding="utf-8")
     print(f"{len(text)} chars, {len(words)} words, {words[-1]['b']:.2f} s -> {d}/narracao.mp3")
 
