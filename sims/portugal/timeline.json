@@ -1,20 +1,174 @@
 {
-  "duration": 85.0,
-  "accent": ["portugal", "turista", "acabou", "mito", "cplp", "simplifica", "motivo", "contrato", "d1", "nomade", "alta", "estudante", "propria", "graca", "paga", "aima", "fevereiro", "receita", "iof", "cinquenta", "consulado", "motivo"],
+  "duration": 87.8,
+  "accent": [
+    "portugal",
+    "turista",
+    "acabou",
+    "mito",
+    "cplp",
+    "simplifica",
+    "motivo",
+    "contrato",
+    "d1",
+    "nomade",
+    "alta",
+    "estudante",
+    "propria",
+    "graca",
+    "paga",
+    "aima",
+    "fevereiro",
+    "receita",
+    "iof",
+    "cinquenta",
+    "consulado",
+    "motivo"
+  ],
   "shots": [
-    ["lisboa", 0, null], ["turista", 0, "esquece"],
-    ["placa", 1, null], ["fim2024", 1, "acabou"],
-    ["mito", 2, null], ["cplp", 2, "visto"], ["papelada", 2, "ser"],
-    ["out2025", 3, null], ["procura", 3, "tambem"],
-    ["motivo", 4, null],
-    ["contrato", 5, null],
-    ["remoto", 6, null], ["renda", 6, "mas"],
-    ["estudante", 7, null], ["rendapropria", 7, "vive"],
-    ["checklist", 8, null], ["pf", 8, "antecedentes"], ["apostila", 8, "apostila"],
-    ["pouso", 9, null], ["aima", 9, "pede"],
-    ["brasil", 10, null], ["fev", 10, "ultimo"], ["receita", 10, "faca"],
-    ["remessa", 11, null], ["iof", 11, "tem"], ["conta", 11, "cada"],
-    ["regras", 12, null], ["consulado", 12, "antes"],
-    ["fim", 13, null]
+    [
+      "lisboa",
+      0,
+      null
+    ],
+    [
+      "turista",
+      0,
+      "esquece"
+    ],
+    [
+      "placa",
+      1,
+      null
+    ],
+    [
+      "fim2024",
+      1,
+      "acabou"
+    ],
+    [
+      "mito",
+      2,
+      null
+    ],
+    [
+      "cplp",
+      2,
+      "visto"
+    ],
+    [
+      "papelada",
+      2,
+      "ser"
+    ],
+    [
+      "out2025",
+      3,
+      null
+    ],
+    [
+      "procura",
+      3,
+      "tambem"
+    ],
+    [
+      "motivo",
+      4,
+      null
+    ],
+    [
+      "contrato",
+      5,
+      null
+    ],
+    [
+      "remoto",
+      6,
+      null
+    ],
+    [
+      "renda",
+      6,
+      "mas"
+    ],
+    [
+      "estudante",
+      7,
+      null
+    ],
+    [
+      "rendapropria",
+      7,
+      "vive"
+    ],
+    [
+      "checklist",
+      8,
+      null
+    ],
+    [
+      "pf",
+      8,
+      "antecedentes"
+    ],
+    [
+      "apostila",
+      8,
+      "apostila"
+    ],
+    [
+      "pouso",
+      9,
+      null
+    ],
+    [
+      "aima",
+      9,
+      "pede"
+    ],
+    [
+      "brasil",
+      10,
+      null
+    ],
+    [
+      "fev",
+      10,
+      "ultimo"
+    ],
+    [
+      "receita",
+      10,
+      "faca"
+    ],
+    [
+      "remessa",
+      11,
+      null
+    ],
+    [
+      "iof",
+      11,
+      "tem"
+    ],
+    [
+      "conta",
+      11,
+      "cada"
+    ],
+    [
+      "regras",
+      12,
+      null
+    ],
+    [
+      "consulado",
+      12,
+      "antes"
+    ],
+    [
+      "fim",
+      13,
+      null
+    ]
   ]
 }

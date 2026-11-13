@@ -18,9 +18,15 @@ import subprocess
 import sys
 from pathlib import Path
 
-VOICE = os.environ.get("ELEVEN_VOICE", "4XmhZ74tBbUVCXIYNMMo")  # Leonardo - Deep & Resonant (pt-BR)
+VOICE = os.environ.get("ELEVEN_VOICE", "4XmhZ74tBbUVCXIYNMMo")  # default: Leonardo (pt-BR). Vai Bem uses Roberta: ohZOfA9iwlZ5nOsoY7LB
 MODEL = "eleven_multilingual_v2"
-SETTINGS = {"stability": 0.45, "similarity_boost": 0.75, "style": 0.15, "use_speaker_boost": True, "speed": 1.05}
+SETTINGS = {
+    "stability": float(os.environ.get("ELEVEN_STABILITY", 0.45)),
+    "similarity_boost": 0.75,
+    "style": float(os.environ.get("ELEVEN_STYLE", 0.15)),
+    "use_speaker_boost": True,
+    "speed": float(os.environ.get("ELEVEN_SPEED", 1.05)),
+}
 
 
 def read_text(md):
