@@ -1,0 +1,18 @@
+html, body { background: #e2e4f1; }
+#app { position: fixed; inset: 0; overflow: hidden; }
+#gl { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.ov { position: absolute; inset: 0; pointer-events: none; font-family: Inter, sans-serif; }
+.tt { position: absolute; left: 70px; right: 70px; top: 150px; padding: 22px 30px 26px; border-radius: 30px; background: #0e1030; text-align: center; }
+.tt b { display: block; font: 900 58px/1.1 Inter, sans-serif; color: #fff; }
+.tt i { display: block; font-style: normal; font: 900 58px/1.1 Inter, sans-serif; color: #ff3d63; }
+.chip { position: absolute; right: 70px; top: 352px; padding: 8px 18px; border-radius: 999px; background: #2b40d3; color: #fff; font: 800 26px Inter, sans-serif; }
+.cpt { position: absolute; left: 60px; right: 60px; top: 1440px; text-align: center; font: 900 92px/1.05 Inter, sans-serif; letter-spacing: -0.02em;
+  color: #fff; -webkit-text-stroke: 20px #0e1030; paint-order: stroke fill; }
+.cpt i { font-style: normal; color: #ff3d63; }
+
+/* half-screen layout (1080x960) */
+.half .tt { left: 150px; right: 150px; top: 14px; padding: 10px 20px 12px; border-radius: 22px; }
+.half .tt b, .half .tt i { display: inline; font-size: 38px; }
+.half .tt i { margin-left: 10px; }
+.half .chip { display: none; }
+.half .cpt { top: 850px; left: 0; right: 0; text-align: center; transform-origin: 50% 50%; font-size: 60px; white-space: nowrap; -webkit-text-stroke: 14px #0e1030; }
