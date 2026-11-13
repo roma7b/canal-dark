@@ -689,6 +689,18 @@ runSim(DEFAULTS, async ({canvas}) => {
         txt('E OUTROS DOCUMENTOS', 540, 562, 62, '#fff');
       });
     },
+    aprovado(t, s) {
+      flat(B.blue);
+      P(t, s.start, 540, 940, () => {
+        rr(290, 600, 500, 680, 34, '#1f2a6b', '#fff', 10);
+        txt('PASSAPORTE', 540, 690, 48, B.yellow);
+        circ(540, 850, 80, null, B.yellow, 10);
+        rr(350, 1000, 380, 210, 20, '#fff', null);
+        txt('VISTO', 540, 1060, 56, B.navy);
+        txt('PORTUGAL', 540, 1130, 48, B.navy, 800);
+      });
+      stamp(t, W(9, 'aprovado') - 0.05, 'APROVADO', B.green, 560, 1120, -0.12, 96);
+    },
     pouso(t, s) {
       sky('#ffb37a', '#ffe1c4');
       const k = ramp(t, s.start, 1.4);

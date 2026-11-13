@@ -1,5 +1,5 @@
 {
-  "duration": 79.5,
+  "duration": 81.5,
   "accent": [
     "portugal",
     "turista",
@@ -21,7 +21,8 @@
     "motivo",
     "curso",
     "modalidades",
-    "documentos"
+    "documentos",
+    "aprovado"
   ],
   "shots": [
     [
@@ -120,9 +121,14 @@
       "esse"
     ],
     [
-      "pouso",
+      "aprovado",
       9,
       null
+    ],
+    [
+      "pouso",
+      9,
+      "chegando"
     ],
     [
       "aima",

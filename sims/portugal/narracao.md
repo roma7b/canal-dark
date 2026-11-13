@@ -12,7 +12,7 @@ O mais comum é um contrato de trabalho com uma empresa portuguesa. Esse é o vi
 Se você trabalha remoto pra fora de Portugal, existe o visto de nômade digital. Mas ele pede uma renda alta.
 Tem também o de estudante, pra quem foi aceito num curso, como um profissionalizante, um técnico ou uma graduação. E o de quem vive de renda própria, como aposentadoria ou aluguel.
 Com o motivo certo, vem a papelada: antecedentes criminais de graça no site da Polícia Federal, com apostila de Haia no cartório, que é paga. E esse é só um dos documentos exigidos.
-Chegando lá, você pede a autorização de residência na AIMA, a agência de imigração.
+Com o visto aprovado, chegando lá, você pede a autorização de residência na AIMA, a agência de imigração.
 Essas são só algumas das modalidades de visto que existem para Portugal hoje.
 As regras mudam rápido. Antes de ir, confere tudo no site do consulado.
 Salva esse vídeo e comenta: qual seria o seu motivo pra ir?
