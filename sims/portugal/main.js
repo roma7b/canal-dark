@@ -4,7 +4,7 @@ import {createChar} from '../loteria/char.js';
 import TL from './timeline.json';
 import WORDS_RAW from './narracao-fit-words.json';
 
-// "Como morar em Portugal (do jeito certo)" for @vaibemviagens.
+// "Como morar em Portugal (do jeito certo)" for @lucasmontemorr.
 // Fast-cut flat motion graphics drawn in 2D canvas: a new shot every 2-3 s,
 // each element pops in on the word that names it. Everything is a pure
 // function of t and reads its timing from the narration word timings.
@@ -842,7 +842,7 @@ runSim(DEFAULTS, async ({canvas}) => {
         ctx.fill();
         txt('salva e comenta', 590, 1290, 60, '#fff', 800);
       });
-      txt('@vaibemviagens', 540, 1430, 54, B.lav, 800);
+      txt('@lucasmontemorr', 540, 1430, 54, B.lav, 800);
     },
   };
 

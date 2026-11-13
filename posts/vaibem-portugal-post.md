@@ -1,6 +1,6 @@
 # Post: Como morar em Portugal (do jeito certo), @vaibemviagens
 
-Arquivo: `videos/vaibem-portugal.mp4` (82 s) | Postagem: @lucasmontemorr
+Arquivo: `videos/vaibem-portugal.mp4` (82 s) | Postagem: @lucasmontemorr (collab opcional com @vaibemviagens)
 
 ## Legenda (Instagram)
 
@@ -16,4 +16,4 @@ Regras de novembro de 2026. Elas mudam rápido: confira sempre no site do consul
 
 Salva esse vídeo e comenta: qual seria o seu motivo pra ir? 👇
 
-#portugal #morarnoexterior #moraremportugal #vistoportugal #vaibemviagens
+#portugal #morarnoexterior #moraremportugal #vistoportugal #vaibemviagens #lucasmontemorr
