@@ -9,6 +9,7 @@ const rad = (d) => (d * Math.PI) / 180;
 export const LOOKS = {
   mandel: {skin: '#f2c9a0', cloth: '#3f5fa8', pants: '#2b2d42', shoe: '#5a3a22', hair: '#3a2a20', outfit: 'suit', hairStyle: 'side', glasses: true},
   viewer: {skin: '#c98a5e', cloth: '#f08a24', pants: '#3b4a6b', shoe: '#f4f4f4', hair: '#1f1a17', outfit: 'hoodie', hairStyle: 'curly', glasses: false},
+  traveler: {skin: '#d9a07a', cloth: '#2b40d3', pants: '#0e1030', shoe: '#f4f4f4', hair: '#2a1d16', outfit: 'hoodie', hairStyle: 'curly', glasses: false},
   helper: {skin: '#e8b48a', cloth: '#3aa76d', pants: '#2b2d42', shoe: '#5a3a22', hair: '#7a4a1e', outfit: 'tee', hairStyle: 'curly', glasses: false},
 };
 
@@ -18,12 +19,16 @@ export function createChar(THREE, lookName) {
   cv.width = W;
   cv.height = H;
   const c = cv.getContext('2d');
-  const tex = new THREE.CanvasTexture(cv);
-  tex.colorSpace = THREE.SRGBColorSpace;
-  tex.anisotropy = 4;
-  const geo = new THREE.PlaneGeometry(4 / 3, 2);
-  geo.translate(0, 1 - (2 * (H - FEET)) / H, 0); // feet on y = 0
-  const mesh = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({map: tex, transparent: true, alphaTest: 0.5, side: THREE.DoubleSide, toneMapped: false}));
+  // THREE = null gives a plain 2D canvas character (for 2D motion graphics)
+  let tex = null, mesh = null;
+  if (THREE) {
+    tex = new THREE.CanvasTexture(cv);
+    tex.colorSpace = THREE.SRGBColorSpace;
+    tex.anisotropy = 4;
+    const geo = new THREE.PlaneGeometry(4 / 3, 2);
+    geo.translate(0, 1 - (2 * (H - FEET)) / H, 0); // feet on y = 0
+    mesh = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({map: tex, transparent: true, alphaTest: 0.5, side: THREE.DoubleSide, toneMapped: false}));
+  }
 
   const limb = (pts, color, w) => {
     c.lineCap = 'round';
@@ -359,9 +364,9 @@ export function createChar(THREE, lookName) {
     c.stroke();
     face(s, hx, hy);
     c.restore();
-    tex.needsUpdate = true;
+    if (tex) tex.needsUpdate = true;
   };
 
   draw();
-  return {mesh, draw};
+  return {mesh, draw, canvas: cv};
 }
