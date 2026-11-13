@@ -78,6 +78,14 @@ def main():
     d = Path(sys.argv[1])
     text = read_text(d / "narracao.md")
     lines = text.split("\n")
+    if os.environ.get("ELEVEN_MODE", "lines") == "full":
+        # whole script in one request: most natural flow, but long texts can drift at the end
+        data = call({"text": text, "model_id": MODEL, "voice_settings": SETTINGS, "language_code": "pt", "seed": 7}, "mp3_44100_128")
+        (d / "narracao.mp3").write_bytes(base64.b64decode(data["audio_base64"]))
+        words = words_from_alignment(text, data["alignment"])
+        (d / "narracao-words.json").write_text(json.dumps(words, ensure_ascii=False, indent=0), encoding="utf-8")
+        print(f"{len(text)} chars, {len(words)} words, {words[-1]['b']:.2f} s -> {d}/narracao.mp3 (full)")
+        return
     # One request per line, with the neighbouring lines as context: long single
     # generations drift and turn robotic towards the end; short ones stay natural.
     pcm, words = bytearray(), []
