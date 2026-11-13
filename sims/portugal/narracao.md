@@ -10,11 +10,10 @@ Em outubro de 2025, também acabou o visto comum pra ir procurar emprego.
 Então você precisa de um motivo, comprovado antes de ir.
 O mais comum é um contrato de trabalho com uma empresa portuguesa. Esse é o visto D1.
 Se você trabalha remoto pra fora de Portugal, existe o visto de nômade digital. Mas ele pede uma renda alta.
-Tem também o de estudante, pra quem foi aceito numa faculdade de lá, e o de quem vive de renda própria, como aposentadoria ou aluguel.
+Tem também o de estudante, pra quem foi aceito num curso, como um profissionalizante, um politécnico ou uma graduação. E o de quem vive de renda própria, como aposentadoria ou aluguel.
 Com o motivo certo, vem a papelada: antecedentes criminais de graça no site da Polícia Federal, com apostila de Haia no cartório, que é paga.
 Chegando lá, você pede a autorização de residência na AIMA, a agência de imigração.
-E no Brasil: até o último dia útil de fevereiro do ano seguinte, faça a comunicação de saída definitiva na Receita.
-Pra mandar dinheiro pra sua conta lá fora, tem IOF de três e meio por cento. A cada dez mil reais, trezentos e cinquenta ficam no caminho.
+Essas são só algumas das modalidades de visto que existem para Portugal hoje.
 As regras mudam rápido. Antes de ir, confere tudo no site do consulado.
 Salva esse vídeo e comenta: qual seria o seu motivo pra ir?
 ```

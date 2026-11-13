@@ -604,6 +604,11 @@ runSim(DEFAULTS, async ({canvas}) => {
         txt('ESTUDANTE', 540, 1152, 80, B.blue);
       });
       check(t, W(7, 'aceito'), 830, 640, 80);
+      if (t > W(7, 'curso') - 0.05) {
+        const items = ['profissionalizante', 'politécnico', 'graduação'];
+        const vis = items.filter((_, i) => t > W(7, ['profissionalizante', 'politecnico', 'graduacao'][i]) - 0.05);
+        if (vis.length) fitTxt(vis.join(' · '), 540, 1290, 56, 940, '#fff', 800);
+      }
     },
     rendapropria(t, s) {
       flat(B.lav);
@@ -767,6 +772,23 @@ runSim(DEFAULTS, async ({canvas}) => {
         }
       }
     },
+    modalidades(t, s) {
+      flat(B.lav);
+      const cards = [['D1', 'TRABALHO', B.red], ['D8', 'NÔMADE', B.blue], ['D4', 'ESTUDO', B.green], ['D7', 'RENDA', '#8a5cf6']];
+      cards.forEach(([code, name, col], i) => {
+        const cx = 300 + (i % 2) * 480, cy = 720 + Math.floor(i / 2) * 380;
+        P(t, s.start + 0.1 + i * 0.15, cx, cy, () => {
+          rr(cx - 200, cy - 150, 400, 300, 36, '#fff');
+          circ(cx, cy - 40, 80, col);
+          txt(code, cx, cy - 36, 72, '#fff');
+          txt(name, cx, cy + 90, 52, B.navy);
+        });
+      });
+      P(t, W(10, 'algumas') - 0.05, 540, 1340, () => {
+        rr(150, 1270, 780, 140, 70, B.navy);
+        txt('E EXISTEM OUTRAS', 540, 1342, 62, '#fff');
+      });
+    },
     regras(t, s) {
       flat(B.yellow);
       ctx.save();
@@ -791,7 +813,7 @@ runSim(DEFAULTS, async ({canvas}) => {
         P(t, tt, 540, 760 + i * 120, () => rr(420, 735 + i * 120, 300, 40, 12, '#c9cde6', null));
         check(t, tt + 0.1, 380, 755 + i * 120, 36);
       }
-      P(t, W(12, 'consulado') - 0.1, 540, 520, () => {
+      P(t, W(11, 'consulado') - 0.1, 540, 520, () => {
         rr(170, 450, 740, 140, 70, B.blue);
         fitTxt('CONFIRA NO CONSULADO', 540, 522, 56, 660, '#fff');
       });
@@ -807,7 +829,7 @@ runSim(DEFAULTS, async ({canvas}) => {
         txt('qual seria o seu', 540, 965, 66, B.navy, 900);
         txt('motivo pra ir?', 540, 1050, 74, B.red, 900);
       });
-      P(t, W(13, 'salva'), 540, 1290, () => {
+      P(t, W(12, 'salva'), 540, 1290, () => {
         // bookmark icon + handle
         ctx.fillStyle = '#fff';
         ctx.beginPath();
@@ -825,7 +847,7 @@ runSim(DEFAULTS, async ({canvas}) => {
   };
 
   // ------------------------------------------------------------------ render
-  const tEnd = L(13).a;
+  const tEnd = L(12).a;
   const render = (t) => {
     const sh = SHOTS.find((x) => t >= x.start && t < x.end) || SHOTS[SHOTS.length - 1];
     ctx.save();

@@ -1,5 +1,5 @@
 {
-  "duration": 87.8,
+  "duration": 82.1,
   "accent": [
     "portugal",
     "turista",
@@ -17,12 +17,10 @@
     "graca",
     "paga",
     "aima",
-    "fevereiro",
-    "receita",
-    "iof",
-    "cinquenta",
     "consulado",
-    "motivo"
+    "motivo",
+    "curso",
+    "modalidades"
   ],
   "shots": [
     [
@@ -126,48 +124,23 @@
       "pede"
     ],
     [
-      "brasil",
+      "modalidades",
       10,
       null
-    ],
-    [
-      "fev",
-      10,
-      "ultimo"
-    ],
-    [
-      "receita",
-      10,
-      "faca"
-    ],
-    [
-      "remessa",
-      11,
-      null
-    ],
-    [
-      "iof",
-      11,
-      "tem"
-    ],
-    [
-      "conta",
-      11,
-      "cada"
     ],
     [
       "regras",
-      12,
+      11,
       null
     ],
     [
       "consulado",
-      12,
+      11,
       "antes"
     ],
     [
       "fim",
-      13,
+      12,
       null
     ]
   ]
