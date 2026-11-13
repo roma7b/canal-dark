@@ -1,5 +1,5 @@
 {
-  "duration": 85.7,
+  "duration": 91.9,
   "accent": [
     "portugal",
     "quatro",
@@ -26,7 +26,10 @@
     "passagem",
     "aprovado",
     "prejuizo",
-    "exigencias"
+    "exigencias",
+    "ajuda",
+    "viagens",
+    "direct"
   ],
   "shots": [
     [
@@ -145,8 +148,18 @@
       "antes"
     ],
     [
-      "fim",
+      "cta",
       14,
+      null
+    ],
+    [
+      "direct",
+      14,
+      "chama"
+    ],
+    [
+      "fim",
+      15,
       null
     ]
   ]

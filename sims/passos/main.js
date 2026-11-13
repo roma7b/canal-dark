@@ -775,7 +775,7 @@ runSim(DEFAULTS, async ({canvas, cfg}) => {
         txt('em qual passo', 540, 965, 66, B.navy, 900);
         txt('você está?', 540, 1050, 74, B.red, 900);
       });
-      P(t, W(14, 'salva'), 540, 1290, () => {
+      P(t, W(15, 'salva'), 540, 1290, () => {
         ctx.fillStyle = '#fff';
         ctx.beginPath();
         ctx.moveTo(250, 1240);
@@ -787,12 +787,56 @@ runSim(DEFAULTS, async ({canvas, cfg}) => {
         ctx.fill();
         txt('salva e comenta', 590, 1290, 60, '#fff', 800);
       });
-      txt('@lucasmontemorr', 540, 1430, 54, B.lav, 800);
+      txt('@vaibemviagens · @lucasmontemorr', 540, 1430, 46, B.lav, 800);
+    },
+    cta(t, s) {
+      flat(B.blue);
+      if (logo) P(t, s.start, 540, 640, () => {
+        const w = 600, h = w * (logo.height / logo.width);
+        ctx.drawImage(logo, 540 - w / 2, 640 - h / 2, w, h);
+      });
+      P(t, W(14, 'ajuda') - 0.1, 540, 820, () => {
+        rr(330, 760, 420, 120, 60, B.yellow, null);
+        txt('AJUDA COM', 540, 822, 60, B.navy);
+      });
+      [['VISTO', 'visto'], ['DOCUMENTOS', 'documentos'], ['PASSAGEM', 'passagem']].forEach(([name, w], i) => {
+        const tt = W(14, w) - 0.08;
+        P(t, tt, 540, 990 + i * 140, () => {
+          rr(220, 935 + i * 140, 640, 110, 55, '#fff');
+          txt(name, 580, 992 + i * 140, 58, B.navy);
+        });
+        check(t, tt + 0.08, 290, 990 + i * 140, 44);
+      });
+    },
+    direct(t, s) {
+      flat(B.lav);
+      P(t, s.start, 540, 940, () => {
+        phone(540, 940, 1.05);
+        circ(540, 740, 80, B.blue);
+        if (logo) {
+          const w = 130, h = w * (logo.height / logo.width);
+          ctx.drawImage(logo, 540 - w / 2, 740 - h / 2, w, h);
+        }
+        fitTxt('@vaibemviagens', 540, 870, 40, 300, B.navy);
+        rr(400, 935, 280, 70, 22, '#eef0fa', null);
+        rr(450, 1030, 230, 70, 22, B.blue, null);
+        rr(400, 1125, 260, 70, 22, '#eef0fa', null);
+      });
+      const pulse = 1 + 0.05 * Math.sin((t - s.start) * 9);
+      P(t, W(14, 'direct') - 0.1, 540, 1320, () => {
+        ctx.save();
+        ctx.translate(540, 1320);
+        ctx.scale(pulse, pulse);
+        ctx.translate(-540, -1320);
+        rr(170, 1255, 740, 130, 65, B.red);
+        txt('CHAMA NO DIRECT', 540, 1322, 66, '#fff');
+        ctx.restore();
+      });
     },
   };
 
   // ------------------------------------------------------------------ render
-  const tEnd = L(14).a;
+  const tEnd = L(15).a;
   const render = (t) => {
     const sh = SHOTS.find((x) => t >= x.start && t < x.end) || SHOTS[SHOTS.length - 1];
     ctx.save();

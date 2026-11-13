@@ -1,6 +1,6 @@
 # Post: Como ir pra Portugal em 4 passos, @vaibemviagens
 
-Arquivo: `videos/vaibem-passos.mp4` (86 s) | Postagem: @lucasmontemorr (collab opcional com @vaibemviagens)
+Arquivo: `videos/vaibem-passos.mp4` (92 s) | Postagem: @lucasmontemorr (collab opcional com @vaibemviagens)
 Inspirado no vídeo "passos-portugal-2026" do próprio Lucas.
 
 ## Legenda (Instagram)
@@ -15,6 +15,8 @@ Quer sair do Brasil e morar em Portugal em 2026? São 4 passos, nessa ordem. �
 Esses são os passos básicos: cada visto tem as suas exigências.
 
 Regras de novembro de 2026. Elas mudam rápido: confira sempre no site do consulado de Portugal antes de ir.
+
+Quer ajuda com o visto, os documentos e a passagem? Chama a @vaibemviagens no direct ✈️
 
 Salva esse vídeo e comenta: em qual passo você está? 👇
 

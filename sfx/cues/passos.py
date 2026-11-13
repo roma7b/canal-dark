@@ -40,7 +40,7 @@ def score(mix, tl):
     dur = tl["duration"]
     put = mix.put
     vol = envelope([(0, 0.8), (0.6, 1), (dur - 1.0, 1), (dur, 0)])
-    mix.put_stereo(0, *pad(dur, [(0, CMAJ), (L(4)[0], AMIN), (L(8)[0], FMAJ), (L(10)[0], CMAJ), (L(12)[0], FMAJ), (L(14)[0], CMAJ)], volume=vol), gain=0.03)
+    mix.put_stereo(0, *pad(dur, [(0, CMAJ), (L(4)[0], AMIN), (L(8)[0], FMAJ), (L(10)[0], CMAJ), (L(12)[0], FMAJ), (L(14)[0], CMAJ), (L(15)[0], FMAJ)], volume=vol), gain=0.03)
 
     cuts = []
     for i, (sid, line, word) in enumerate(tl["shots"]):
@@ -57,6 +57,6 @@ def score(mix, tl):
     # the four step cards rise in pitch
     for k, n in enumerate([2, 4, 8, 10]):
         put(L(n)[0], chime([523.25 * 2 ** (k * 2 / 12), 783.99 * 2 ** (k * 2 / 12)], dur=0.9, tau=0.3), 0.12)
-    for n, w in [(0, "ordem"), (3, "tres"), (5, "contrato"), (5, "curso"), (6, "consulado"), (7, "checklist"), (8, "meios"), (9, "reserva"), (10, "aprovado"), (12, "basicos"), (13, "consulado")]:
+    for n, w in [(0, "ordem"), (3, "tres"), (5, "contrato"), (5, "curso"), (6, "consulado"), (7, "checklist"), (8, "meios"), (9, "reserva"), (10, "aprovado"), (12, "basicos"), (13, "consulado"), (14, "visto"), (14, "documentos"), (14, "passagem"), (14, "direct")]:
         put(W(n, w), pop(700, 1100, dur=0.16), 0.16)
-    put(L(14)[0], chime([523.25, 659.25, 783.99, 1046.5], dur=2.2, tau=0.8), 0.14)
+    put(L(15)[0], chime([523.25, 659.25, 783.99, 1046.5], dur=2.2, tau=0.8), 0.14)

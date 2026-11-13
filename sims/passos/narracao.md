@@ -17,6 +17,7 @@ Quarto passo: a passagem. Só compra com o visto aprovado e o passaporte de volt
 Se o visto atrasar, uma passagem comprada antes pode virar prejuízo.
 Esses são os passos básicos. Cada visto tem as suas exigências.
 As regras mudam rápido. Antes de ir, confere tudo no site do consulado.
+Quer ajuda com o visto, os documentos e a passagem? Chama a Vai Bem Viagens no direct.
 Salva esse vídeo e comenta: em qual passo você está?
 ```
 
