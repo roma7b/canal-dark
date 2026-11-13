@@ -1,5 +1,5 @@
 {
-  "duration": 80.1,
+  "duration": 84.9,
   "accent": [
     "portugal",
     "turista",
@@ -20,7 +20,8 @@
     "consulado",
     "motivo",
     "curso",
-    "modalidades"
+    "modalidades",
+    "documentos"
   ],
   "shots": [
     [
@@ -112,6 +113,11 @@
       "apostila",
       8,
       "apostila"
+    ],
+    [
+      "documentos",
+      8,
+      "esse"
     ],
     [
       "pouso",

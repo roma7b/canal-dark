@@ -6,12 +6,12 @@ Regras conferidas em 13/11/2026. Fontes no fim do arquivo.
 Quer morar em Portugal? Esquece ir como turista e se resolver lá.
 Esse caminho, a manifestação de interesse, acabou em junho de 2024.
 E tem outro mito: o tal visto CPLP não deixa você ir sem nada. Ser brasileiro só simplifica a papelada.
-Em outubro de 2025, também acabou o visto comum pra ir procurar emprego.
+Em outubro de 2025, também acabou o visto comum de procura de trabalho.
 Então você precisa de um motivo, comprovado antes de ir.
 O mais comum é um contrato de trabalho com uma empresa portuguesa. Esse é o visto D1.
 Se você trabalha remoto pra fora de Portugal, existe o visto de nômade digital. Mas ele pede uma renda alta.
-Tem também o de estudante, pra quem foi aceito num curso, como um profissionalizante, um politécnico ou uma graduação. E o de quem vive de renda própria, como aposentadoria ou aluguel.
-Com o motivo certo, vem a papelada: antecedentes criminais de graça no site da Polícia Federal, com apostila de Haia no cartório, que é paga.
+Tem também o de estudante, pra quem foi aceito num curso, como um profissionalizante, um técnico ou uma graduação. E o de quem vive de renda própria, como aposentadoria ou aluguel.
+Com o motivo certo, vem a papelada: antecedentes criminais de graça no site da Polícia Federal, com apostila de Haia no cartório, que é paga. E esse é só um dos documentos exigidos.
 Chegando lá, você pede a autorização de residência na AIMA, a agência de imigração.
 Essas são só algumas das modalidades de visto que existem para Portugal hoje.
 As regras mudam rápido. Antes de ir, confere tudo no site do consulado.

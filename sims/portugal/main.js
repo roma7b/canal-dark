@@ -544,7 +544,7 @@ runSim(DEFAULTS, async ({canvas}) => {
       });
       magnifier(lerp(420, 620, smooth(frac((t - s.start) / 1.6))), 920, 130);
       xMark(t, W(3, 'comum'), 540, 920, 230);
-      stamp(t, W(3, 'emprego') - 0.1, 'ACABOU', B.red, 540, 1300, 0.06);
+      stamp(t, W(3, 'trabalho') - 0.1, 'ACABOU', B.red, 540, 1300, 0.06);
     },
     motivo(t, s) {
       flat(B.lav);
@@ -605,8 +605,8 @@ runSim(DEFAULTS, async ({canvas}) => {
       });
       check(t, W(7, 'aceito'), 830, 640, 80);
       if (t > W(7, 'curso') - 0.05) {
-        const items = ['profissionalizante', 'politécnico', 'graduação'];
-        const vis = items.filter((_, i) => t > W(7, ['profissionalizante', 'politecnico', 'graduacao'][i]) - 0.05);
+        const items = ['profissionalizante', 'técnico', 'graduação'];
+        const vis = items.filter((_, i) => t > W(7, ['profissionalizante', 'tecnico', 'graduacao'][i]) - 0.05);
         if (vis.length) fitTxt(vis.join(' · '), 540, 1290, 56, 940, '#fff', 800);
       }
     },
@@ -671,6 +671,23 @@ runSim(DEFAULTS, async ({canvas}) => {
         txt('APOSTILA DE HAIA', 540, 562, 64, '#fff');
       });
       stamp(t, W(8, 'paga') - 0.05, 'PAGA · R$', B.red, 560, 1180, 0.1, 80);
+    },
+    documentos(t, s) {
+      flat(B.lav);
+      const docs = [['PASSAPORTE', '#1f2a6b', -0.1, 250, 1000], ['COMPROVANTES', B.blue, 0.1, 830, 1000], ['ANTECEDENTES', B.navy, 0.0, 540, 900]];
+      docs.forEach(([name, col, rot, cx, cy], i) => P(t, s.start + 0.05 + i * 0.15, cx, cy, () => {
+        ctx.save();
+        ctx.translate(cx, cy);
+        ctx.rotate(rot);
+        ctx.translate(-cx, -cy);
+        doc(cx - 160, cy - 230, 320, 440, name, col, 3);
+        ctx.restore();
+      }));
+      check(t, s.start + 0.45, 640, 1080, 60);
+      P(t, W(8, 'documentos') - 0.1, 540, 560, () => {
+        rr(130, 490, 820, 140, 70, B.red);
+        txt('E OUTROS DOCUMENTOS', 540, 562, 62, '#fff');
+      });
     },
     pouso(t, s) {
       sky('#ffb37a', '#ffe1c4');
