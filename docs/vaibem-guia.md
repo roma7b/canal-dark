@@ -20,6 +20,17 @@ Quem aprova o conteúdo é a **Brena** (Vai Bem). Primeiro vídeo: `sims/portuga
 - Deixar claro quando a lista é parcial ("essas são só algumas das modalidades", "esse é só um dos documentos exigidos").
 - Fontes vão no fim do `narracao.md` de cada vídeo, com a data da consulta.
 
+## Regra número 2: não falar de leis
+
+- No roteiro, nas cenas e na legenda, nada de citar leis, decretos, portarias, artigos ou números de norma
+  (ex.: "Lei 61/2025", "Decreto-Lei 37-A/2024"), nem explicar ou interpretar o que uma lei diz.
+- Falar só do efeito prático, com data: "desde outubro de 2025, esse visto não existe mais",
+  não "a Lei 61/2025 revogou...".
+- Nada de termos jurídicos ("revogou", "regime", "dispositivo", "jurisprudência"), nem de direitos, recursos ou processos.
+  O vídeo explica o caminho de visto e documentos; não é orientação jurídica.
+- A lei pode servir para conferir a informação e aparecer nas fontes do `narracao.md`, mas, sempre que possível,
+  a fonte principal é a página do consulado, do governo ou do serviço (gov.pt, Portal Diplomático, VFS Global, AIMA).
+
 ## Roteiro
 
 - 70 a 90 s, uma frase por linha no bloco ``` do `sims/<nome>/narracao.md`.
