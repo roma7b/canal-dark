@@ -50,7 +50,10 @@ const loadImg = (src) =>
     im.src = src;
   });
 
-runSim(DEFAULTS, async ({canvas}) => {
+runSim(DEFAULTS, async ({canvas, cfg}) => {
+  // cfg.half: 1080x960 layout for posts where the video fills only the top half of the screen
+  const HALF = !!cfg.half;
+  if (HALF) document.documentElement.classList.add('half');
   await document.fonts.load('900 40px "Inter"').catch(() => {});
   const ctx = canvas.getContext('2d');
   const logo = await loadImg('../portugal/logo-vaibem-branco.png');
@@ -61,9 +64,9 @@ runSim(DEFAULTS, async ({canvas}) => {
   const app = document.getElementById('app');
   const ov = document.createElement('div');
   ov.className = 'ov';
-  ov.innerHTML = '<div class="tt"><b>como morar em portugal</b><i>do jeito certo</i></div><div class="chip">regras de nov/2026</div><div class="cap"></div>';
+  ov.innerHTML = '<div class="tt"><b>como morar em portugal</b><i>do jeito certo</i></div><div class="chip">regras de nov/2026</div><div class="cpt"></div>';
   app.appendChild(ov);
-  const cap = ov.querySelector('.cap'), title = ov.querySelector('.tt'), chip = ov.querySelector('.chip');
+  const cap = ov.querySelector('.cpt'), title = ov.querySelector('.tt'), chip = ov.querySelector('.chip');
 
   // ------------------------------------------------------------- drawing kit
   const S = 1080;
@@ -238,9 +241,9 @@ runSim(DEFAULTS, async ({canvas}) => {
   };
   const ground = (y = 1260) => {
     ctx.fillStyle = '#c8ccdf';
-    ctx.fillRect(0, y, S, 30);
+    ctx.fillRect(-400, y, S + 800, 30);
     ctx.fillStyle = '#4a5168';
-    ctx.fillRect(0, y + 30, S, 240);
+    ctx.fillRect(-400, y + 30, S + 800, 600);
     ctx.fillStyle = '#fff';
     for (let x = 30; x < S; x += 170) ctx.fillRect(x, y + 140, 90, 16);
   };
@@ -257,11 +260,11 @@ runSim(DEFAULTS, async ({canvas}) => {
     g.addColorStop(0, top);
     g.addColorStop(1, bot);
     ctx.fillStyle = g;
-    ctx.fillRect(0, 0, S, 1920);
+    ctx.fillRect(-400, -400, S + 800, 2720);
   };
   const flat = (col) => {
     ctx.fillStyle = col;
-    ctx.fillRect(0, 0, S, 1920);
+    ctx.fillRect(-400, -400, S + 800, 2720);
     ctx.globalAlpha = 0.07;
     ctx.fillStyle = col === B.blue || col === B.navy || col === B.red ? '#fff' : B.navy;
     for (let y = 0; y < 1920; y += 80) for (let x = (y / 80) % 2 ? 40 : 0; x < S; x += 80) {
@@ -885,9 +888,16 @@ runSim(DEFAULTS, async ({canvas}) => {
     const z = lerp(1.08, 1, easeOutCubic(e));
     const idx = SHOTS.indexOf(sh);
     const dx = (1 - easeOutCubic(e)) * (idx % 2 ? 80 : -80);
-    ctx.translate(S / 2 + dx, 960);
-    ctx.scale(z, z);
-    ctx.translate(-S / 2, -960);
+    if (HALF) {
+      // map the scene band y 420..1420 into y 95..855 of a 1080x960 frame
+      ctx.translate(S / 2 + dx, 475);
+      ctx.scale(z * 0.72, z * 0.72);
+      ctx.translate(-S / 2, -900);
+    } else {
+      ctx.translate(S / 2 + dx, 960);
+      ctx.scale(z, z);
+      ctx.translate(-S / 2, -960);
+    }
     SHOT[sh.id](t, sh);
     ctx.restore();
     // white flash on the cut
@@ -911,7 +921,7 @@ runSim(DEFAULTS, async ({canvas}) => {
   };
   const resize = () => {
     canvas.width = 1080;
-    canvas.height = 1920;
+    canvas.height = HALF ? 960 : 1920;
   };
   resize();
   return {render, resize};
