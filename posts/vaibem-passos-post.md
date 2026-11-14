@@ -1,11 +1,11 @@
 # Post: Como ir pra Portugal em 4 passos, @vaibemviagens
 
-Arquivo: `videos/vaibem-passos.mp4` (92 s) | Postagem: @lucasmontemorr (collab opcional com @vaibemviagens)
+Arquivo: `videos/vaibem-passos.mp4` (93 s) | Postagem: @lucasmontemorr (collab opcional com @vaibemviagens)
 Inspirado no vídeo "passos-portugal-2026" do próprio Lucas.
 
 ## Legenda (Instagram)
 
-Quer sair do Brasil e morar em Portugal em 2026? São 4 passos, nessa ordem. 🇵🇹
+Quer sair do Brasil e morar em Portugal em 2027? São 4 passos, nessa ordem. 🇵🇹
 
 ✈️ 1. Passaporte: válido por pelo menos 3 meses além da estadia prevista.
 ❌ 2. Visto: o de procura de trabalho está suspenso desde outubro de 2025. Hoje você precisa de um motivo, como contrato de trabalho ou curso. O checklist de cada visto está no site da VFS Global.

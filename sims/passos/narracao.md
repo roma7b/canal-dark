@@ -3,7 +3,7 @@
 Inspirado no vídeo "passos-portugal-2026" do @lucasmontemorr. Regras conferidas em 13/11/2026. Fontes no fim do arquivo.
 
 ```
-Quer sair do Brasil e morar em Portugal em 2026? São quatro passos, nessa ordem.
+Quer sair do Brasil e morar em Portugal em 2027? São quatro passos, nessa ordem.
 Mas antes, esquece aquela ideia de pegar um voo amanhã e se resolver lá. Isso não existe mais.
 Primeiro passo: o passaporte. Se ainda não tem, você pede no site da Polícia Federal.
 Se já tem, olha a validade. Ele precisa valer pelo menos três meses além do tempo previsto da sua estadia.

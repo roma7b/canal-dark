@@ -502,7 +502,7 @@ runSim(DEFAULTS, async ({canvas, cfg}) => {
       suitcase(620, 1400, 0.8);
       P(t, W(0, 'portugal') - 0.05, 540, 1040, () => {
         rr(400, 985, 280, 110, 55, B.blue, null);
-        txt('2026', 540, 1042, 70, '#fff');
+        txt('2027', 540, 1042, 70, '#fff');
       });
     },
     quatro(t, s) {
