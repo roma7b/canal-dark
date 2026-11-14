@@ -9,7 +9,8 @@ Quem aprova o conteúdo é a **Brena** (Vai Bem). Primeiro vídeo: `sims/portuga
 - Brasileiros que querem viajar ou morar fora. Tom de amiga que explica, direto, sem prometer nada.
 - Foco no que a agência faz: **vistos, documentação, viagem**. A Brena pediu para tirar assuntos fora do escopo
   (ex.: saída fiscal na Receita, IOF), porque a agência não oferece esses serviços.
-- Nunca prometer visto, prazo ou resultado. Sempre fechar com "as regras mudam rápido, confira no site do consulado".
+- Nunca prometer visto, prazo ou resultado. Fechar com "as regras de visto mudam rápido." e logo depois o CTA da Vai Bem.
+- **Não usar "confere tudo no site do consulado"** (pedido da Brena, 14/11/2026): não existe um site do consulado com tudo, e os checklists ficam na VFS. Os vídeos já publicados ficam como estão.
 
 ## Regra número 1: só informação verdadeira
 
@@ -34,7 +35,7 @@ Quem aprova o conteúdo é a **Brena** (Vai Bem). Primeiro vídeo: `sims/portuga
 ## Roteiro
 
 - 70 a 90 s, uma frase por linha no bloco ``` do `sims/<nome>/narracao.md`.
-- Estrutura: gancho que derruba um mito → o que mudou (com data) → o caminho certo, passo a passo → aviso de que há outros casos → "confira no consulado" → CTA "salva e comenta: <pergunta>".
+- Estrutura: gancho que derruba um mito → o que mudou (com data) → o caminho certo, passo a passo → aviso de que há outros casos → "as regras de visto mudam rápido" → CTA da Vai Bem ("Quer ajuda com o visto, os documentos e a passagem? Chama a Vai Bem Viagens no direct.") → "salva e comenta: <pergunta>".
 - Frases curtas e faladas. Cada frase vira uma ou duas cenas.
 
 ## Estilo visual (motion graphics 2D em canvas, sem custo de créditos)
@@ -91,7 +92,7 @@ e a **faixa de baixo** com a legenda e o @ (y > ≈1520).
 ## Legenda de post (modelo)
 
 Ver `posts/vaibem-portugal-post.md`: gancho, 3 linhas com ✈️ ❌ ✅, aviso de que há outras modalidades,
-"Regras de <mês>/<ano>... confira no site do consulado", CTA, hashtags (#vaibemviagens #lucasmontemorr).
+"Regras de <mês>/<ano>. Elas mudam rápido.", CTA da Vai Bem (direct da @vaibemviagens), "salva e comenta", hashtags (#vaibemviagens #lucasmontemorr).
 
 ## Ideias de próximos temas
 
