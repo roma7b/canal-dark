@@ -9,6 +9,7 @@ const rad = (d) => (d * Math.PI) / 180;
 export const LOOKS = {
   mandel: {skin: '#f2c9a0', cloth: '#3f5fa8', pants: '#2b2d42', shoe: '#5a3a22', hair: '#3a2a20', outfit: 'suit', hairStyle: 'side', glasses: true},
   viewer: {skin: '#c98a5e', cloth: '#f08a24', pants: '#3b4a6b', shoe: '#f4f4f4', hair: '#1f1a17', outfit: 'hoodie', hairStyle: 'curly', glasses: false},
+  scientist: {skin: '#f2c9a0', cloth: '#f4f6fa', pants: '#2b2d42', shoe: '#5a3a22', hair: '#9a9a9a', outfit: 'suit', hairStyle: 'side', glasses: true},
   traveler: {skin: '#d9a07a', cloth: '#2b40d3', pants: '#0e1030', shoe: '#f4f4f4', hair: '#2a1d16', outfit: 'hoodie', hairStyle: 'curly', glasses: false},
   helper: {skin: '#e8b48a', cloth: '#3aa76d', pants: '#2b2d42', shoe: '#5a3a22', hair: '#7a4a1e', outfit: 'tee', hairStyle: 'curly', glasses: false},
 };
