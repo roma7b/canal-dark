@@ -64,7 +64,7 @@ runSim(DEFAULTS, async ({canvas, cfg}) => {
   const app = document.getElementById('app');
   const ov = document.createElement('div');
   ov.className = 'ov';
-  ov.innerHTML = '<div class="tt"><b>as 3 fases de quem</b><i>se muda pra portugal</i><div class="chip">regras de nov/2026</div></div><div class="cpt"></div>';
+  ov.innerHTML = '<div class="tt"><b>as 3 fases de quem</b><i>se muda pra portugal</i></div><div class="cpt"></div>';
   app.appendChild(ov);
   const cap = ov.querySelector('.cpt'), title = ov.querySelector('.tt'), chip = ov.querySelector('.chip');
 
@@ -604,13 +604,14 @@ runSim(DEFAULTS, async ({canvas, cfg}) => {
       globe(540, 900, 260, t);
       const u = clamp01((t - s.start) / 2.2);
       plane(lerp(220, 860, smooth(u)), 760 - Math.sin(u * Math.PI) * 260, 0.7, lerp(-0.3, 0.3, u));
-      label(t, W(1, 'pais') - 0.1, 'MUDAR DE PAÍS', 540, 1290, 700, '#fff', B.blue);
+      label(t, W(1, 'imigrante') - 0.1, 'TODO IMIGRANTE', 540, 1290, 720, '#fff', B.blue);
     },
     tresfases(t, s) {
       flat(B.lav);
       const items = [['LUA DE MEL', B.red], ['CRISE', '#5b6280'], ['ADAPTAÇÃO', B.green]];
+      label(t, s.start, 'VAI PASSAR POR ESSAS 3 FASES', 540, 500, 900, B.navy, '#fff', 54);
       items.forEach(([name, col], i) => {
-        const cy = 640 + i * 250;
+        const cy = 720 + i * 230;
         P(t, s.start + 0.1 + i * 0.2, 540, cy, () => {
           rr(150, cy - 100, 780, 200, 50, '#fff');
           circ(270, cy, 70, col);
@@ -917,9 +918,10 @@ runSim(DEFAULTS, async ({canvas, cfg}) => {
     const dx = (1 - easeOutCubic(e)) * (idx % 2 ? 80 : -80);
     if (HALF) {
       // map the scene band y 420..1420 into y 95..855 of a 1080x960 frame
-      ctx.translate(S / 2 + dx, 475);
-      ctx.scale(z * 0.72, z * 0.72);
-      ctx.translate(-S / 2, -900);
+      // TikTok-safe top half: scene band y 450..1460 into y 292..858, left of the icon column
+      ctx.translate(S / 2 - 40 + dx, 575);
+      ctx.scale(z * 0.56, z * 0.56);
+      ctx.translate(-S / 2, -955);
     } else {
       // TikTok/Reels safe area: scene band y 450..1460 shrinks into y 501..1309,
       // shifted left of the right-hand icon column
@@ -938,7 +940,7 @@ runSim(DEFAULTS, async ({canvas, cfg}) => {
 
     const showTitle = t < tEnd;
     title.style.opacity = showTitle ? 1 : 0;
-    chip.style.opacity = showTitle ? 1 : 0;
+    if (chip) chip.style.opacity = showTitle ? 1 : 0;
     const c = t < tEnd ? CAPS.find((x) => t >= x.a && t < x.b) : null;
     if (c) {
       const html = c.words.map((w) => (TL.accent.includes(norm(w)) ? `<i>${w}</i>` : w)).join(' ');

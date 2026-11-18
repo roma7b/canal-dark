@@ -4,7 +4,7 @@ Inspirado no Reels do @lucasmontemorr sobre as 3 fases do imigrante (instagram.c
 
 ```
 Ninguém te conta isso antes de você se mudar pra Portugal.
-Quase todo mundo que muda de país passa por fases. E saber disso ajuda a atravessar cada uma.
+Todo imigrante vai passar por essas três fases. E saber disso ajuda a atravessar cada uma.
 A primeira é a fase da lua de mel. Tudo é novo, e até ir na padaria parece uma aventura.
 Você tira foto de tudo, prova tudo, e parece que tá vivendo um conto de fadas. Aproveita, porque ela passa.
 Aí vem a segunda fase: a crise.
@@ -22,7 +22,7 @@ Salva esse vídeo e comenta: em qual fase você está?
 
 ## O que mudou em relação ao vídeo do Lucas
 
-- "Todo imigrante" → "quase todo mundo" (é comum, não universal).
+- Frase "todo imigrante vai passar por essas 3 fases" mantida a pedido do Lucas (18/11/2026); selo de data removido a pedido dele.
 - Sem "dura uns dois meses" / "até um ano": o tempo varia muito de pessoa pra pessoa.
 - Nomes das fases: lua de mel, crise, adaptação (modelo do choque cultural).
 

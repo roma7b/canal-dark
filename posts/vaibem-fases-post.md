@@ -1,6 +1,6 @@
 # Post: As 3 fases de quem se muda pra Portugal, @vaibemviagens
 
-Arquivo: `videos/vaibem-fases.mp4` (73 s) | Postagem: @lucasmontemorr (collab opcional com @vaibemviagens) | TikTok
+Arquivo: `videos/vaibem-fases.mp4` (71 s) | Postagem: @lucasmontemorr (collab opcional com @vaibemviagens) | TikTok
 Inspirado no Reels do próprio Lucas sobre as 3 fases do imigrante.
 
 ## Legenda (Instagram / TikTok)

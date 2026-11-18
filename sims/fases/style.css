@@ -10,9 +10,7 @@ html, body { background: #e2e4f1; }
   color: #fff; -webkit-text-stroke: 20px #0e1030; paint-order: stroke fill; }
 .cpt i { font-style: normal; color: #ff3d63; }
 
-/* half-screen layout (1080x960) */
-.half .tt { left: 150px; right: 150px; top: 14px; padding: 10px 20px 12px; border-radius: 22px; }
-.half .tt b, .half .tt i { display: inline; font-size: 38px; }
-.half .tt i { margin-left: 10px; }
-.half .chip { display: none; }
-.half .cpt { top: 850px; left: 0; right: 0; text-align: center; transform-origin: 50% 50%; font-size: 60px; white-space: nowrap; -webkit-text-stroke: 14px #0e1030; }
+/* half-screen layout (1080x960, top half of a reaction video): the TikTok UI covers y < 290
+   and the icon column, so no title strip; scene and caption sit in the free area */
+.half .tt { display: none; }
+.half .cpt { top: 862px; left: 0; right: 140px; text-align: center; transform-origin: 50% 50%; font-size: 58px; white-space: nowrap; -webkit-text-stroke: 14px #0e1030; }

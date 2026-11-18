@@ -46,7 +46,7 @@ Quem aprova o conteúdo é a **Brena** (Vai Bem). Primeiro vídeo: `sims/portuga
 - Cada elemento entra na palavra que o nomeia (carimbos "ACABOU", "APROVADO", X vermelho, checks verdes).
 - Paleta da marca: azul `#2b40d3`, vermelho `#e8193f`, lilás `#e2e4f1`, azul-marinho `#0e1030`, creme `#fff6ea`.
   Fonte Inter Black. Personagem 2D `traveler` (de `sims/loteria/char.js`).
-- Título fixo no topo ("como morar em portugal / do jeito certo") e selo "regras de <mês>/<ano>".
+- Título fixo no topo. Selo "regras de <mês>/<ano>" só em vídeo sobre regras de visto; o Lucas pediu para tirar no das 3 fases.
 - Legenda grande de 1-2 palavras, com palavras-chave em vermelho (lista `accent` no `timeline.json`).
 - Final: logo Vai Bem, pergunta do CTA, "salva e comenta", @lucasmontemorr.
 - Logo atual: `sims/portugal/logo-vaibem-branco.png` (recorte do rodapé das cotações, baixa resolução — pedir PNG/SVG em alta).
@@ -69,6 +69,8 @@ e a **faixa de baixo** com a legenda e o @ (y > ≈1520).
 
 - **Tela cheia** 1080x1920: `--size 1080x1920`.
 - **Metade de cima** 1080x960 (o Lucas aparece gravado embaixo): `--config half.json` com `{"half": true}` e `--size 1080x960`.
+  Também respeita a área livre do TikTok: sem faixa de título (o topo até y≈290 fica coberto), cenas em y≈290..860
+  à esquerda da coluna de ícones, legenda em y≈862 (modelo: `sims/fases/`, `half.json` + `.half` no `style.css`).
   Esconde o selo, título vira faixa fina, cenas reenquadradas.
 
 ## Voz (ElevenLabs, chave já salva no ambiente canal-dark)
